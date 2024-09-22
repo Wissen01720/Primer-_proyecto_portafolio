@@ -1,0 +1,541 @@
+/* Reseteo y estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el header y navegación */
+#main-nav {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+#nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+#nav-links li {
+    margin-left: 15px;
+}
+
+#nav-links li a:hover {
+    color: #f39c12;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Icono del menú para móviles */
+#menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+/* Sección de video e inicio */
+#backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.inicio {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.mi_inicio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mi_inicio p {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .mi_inicio h1 {
+        font-size: 2rem;
+    }
+
+    .mi_inicio p {
+        font-size: 1rem;
+    }
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #fff;
+    margin-left: 0.1rem;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Sección Sobre Nosotros */
+.about_us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.about_us img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 4rem;
+}
+
+.about_us img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.seccion-about {
+    max-width: 600px;
+}
+
+.seccion-about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.seccion-about h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #f39c12;
+}
+
+.seccion-about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+    .about_us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about_us img {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .seccion-about h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Sección de conocimientos / tecnologías */
+.tecnologias {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.contenedor-tecnologias {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.texto-introductorio {
+    font-size: 1.1em;
+    line-height: 1.6;
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 5px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contenedor-tecnologias h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .contenedor-tecnologias h1 {
+        font-size: 1.8em;
+    }
+}
+
+.tecnologias > p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Menu de navegación de tecnologías */
+.menu-navegacion-tecnologias ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.menu-navegacion-tecnologias li {
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-navegacion-tecnologias li:hover,
+.menu-navegacion-tecnologias li.active {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Flexibilidad de la navegación */
+@media (max-width: 768px) {
+    .menu-navegacion-tecnologias ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-navegacion-tecnologias li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Contenido de las tecnologías */
+.tecnologias-contenido {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.tecnologia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px; 
+    margin: 0 auto;
+}
+
+.tech-item {
+    position: relative;
+    width: calc(50% - 30px);
+    height: auto;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+.tech-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s;
+}
+
+.tech-item:hover img {
+    opacity: 0.1;
+}
+
+/* Información de la tecnología */
+.tech-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    opacity: 0.95;
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(100%);
+}
+
+.tech-item:hover .tech-info {
+    transform: translateY(0);
+}
+
+.tech-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tech-info p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .tech-item {
+        width: calc(100% - 30px);
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .tech-item {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-item {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+    }
+
+    .tech-info h3 {
+        font-size: 1.2em;
+    }
+
+    .tech-info p {
+        font-size: 1em;
+    }
+}
+
+/* Sección logros */
+.logros {
+    padding: 40px 15px;
+    background-color: #f9f9f9;
+}
+
+.logros-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logros h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+    position: relative;
+}
+
+.logro {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: calc(50% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+    .logro {
+        width: 100%;
+    }
+
+    .logros h1 {
+        font-size: 1.8rem;
+    }
+}
+
+.logro:hover {
+    transform: translateY(-5px);
+}
+
+.logro h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.modal-content {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .logro {
+        width: calc(100% - 20px);
+    }
+
+    .logros h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 15px;
+}
+
+footer .redSocial ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+footer .redSocial ul li {
+    margin: 5px 10px;
+}
+
+footer .redSocial ul li a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .redSocial ul li a:hover {
+    color: #f39c12;
+}
+
+footer main p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}

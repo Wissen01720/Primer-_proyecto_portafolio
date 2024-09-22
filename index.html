@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hoja de vida</title>
+</head>
+<body>
+    <header>
+        <nav id="main-nav">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <section class="inicio">
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="videos/1625-148614367_small.mp4" type="video/mp4">
+            Se produjo un error en la carga del video
+        </video>
+        <div class="mi_inicio">
+            <h1 class="principal">
+                <span id="typedText"></span><span class="cursor">|</span>
+            </h1>
+            <p>Bienvenido a mi mundo</p>
+        </div>
+    </section>    
+    <section class="about_us">
+        <img src="img/mi_foto.jpg" alt="">
+        <div class="seccion-about">
+            <h1>Quien soy yo</h1>
+            <p>Hola! mi nombre es Edgard Patiño y soy un apasionado de la programación. He tenido la oportunidad de certificarme en diversas áreas del desarrollo, incluyendo el desarrollo móvil y web. Mi objetivo es seguir aprendiendo y creciendo en este fascinante campo, aportando soluciones innovadoras y eficientes.</p> 
+        </div>
+    </section>
+    <section class="tecnlogias">
+        <div class="contenedor-tecnologias">
+            <h1>Conocimientos</h1>
+            <p class="texto-introductorio">A lo largo de mi carrera, he adquirido experiencia en diversas tecnologías que me permiten desarrollar soluciones innovadoras y eficientes. Siempre me esfuerzo por mantenerme actualizado con las últimas tendencias tecnológicas para ofrecer soluciones modernas y efectivas.</p>
+            <nav class="menu-navegacion-tecnologias">
+                <ul>
+                    <li data-category="bases de datos" class="active"><p>BASE DE DATOS</p></li>
+                    <li data-category="movil"><p>MOVIL</p></li>
+                    <li data-category="web"><p>WEB</p></li>
+                    <li data-category="seguridad"><p>SEGURIDAD</p></li>
+                </ul>
+            </nav>
+            <div class="tegnologias-contenido">
+                <div class="tecnologia" id="bases de datos">
+                    <div class="tech-item" data-name="MySQL" data-experience="5 años">
+                        <img src="img/18.png" alt="MySQL">
+                        <div class="tech-info">
+                            <h3>MySQL</h3>
+                            <p>Experiencia: 3 años</p>
+                            <p>MySQL es uno de los sistemas de gestión de bases de datos más utilizados. He trabajado en la administración y optimización de bases de datos complejas para aplicaciones web, implementando soluciones escalables.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="PostgreSQL" data-experience="3 años">
+                        <img src="img/19.png" alt="PostgreSQL">
+                        <div class="tech-info">
+                            <h3>PostgreSQL</h3>
+                            <p>Experiencia: 1 años</p>
+                            <p>PostgreSQL es una base de datos avanzada y de código abierto que permite trabajar con datos relacionales y no relacionales. He desarrollado soluciones para diferentes sistemas de gestión y almacenamiento de datos.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="MariaDB" data-experience="2 años">
+                        <img src="img/20.png" alt="MariaDB">
+                        <div class="tech-info">
+                            <h3>MariaDB</h3>
+                            <p>Experiencia: 1 años</p>
+                            <p>MariaDB, un fork de MySQL, ofrece mejoras en el rendimiento y nuevas funcionalidades. He utilizado MariaDB en varios proyectos donde era necesario un manejo eficiente de datos a gran escala, como sistemas de gestión.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologia" id="movil" style="display: none;">
+                    <div class="tech-item" data-name="Kotlin" data-experience="5 años">
+                        <img src="img/1.png" alt="Kotlin">
+                        <div class="tech-info">
+                            <h3>Kotlin</h3>
+                            <p>Experiencia: 7 meses</p>
+                            <p>Kotlin es el lenguaje oficial para el desarrollo de aplicaciones Android. Durante mi experiencia, he creado aplicaciones móviles de bajo nivel con la implementando bases de datos locales.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="Java" data-experience="3 años">
+                        <img src="img/2.png" alt="Java">
+                        <div class="tech-info">
+                            <h3>Java</h3>
+                            <p>Experiencia: 3 años</p>
+                            <p>Java ha sido fundamental en el desarrollo de aplicaciones móviles y web. Lo he utilizado para crear portables de aplicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologia" id="web" style="display: none;">
+                    <div class="tech-item" data-name="CSS" data-experience="1 año">
+                        <img src="img/13.png" alt="CSS">
+                        <div class="tech-info">
+                            <h3>CSS</h3>
+                            <p>Experiencia: 3 año</p>
+                            <p>CSS es el lenguaje que utilizo para estilizar y dar diseño a páginas web. He trabajado en la creación de interfaces responsivas y atractivas, mejorando la experiencia de usuario en diferentes dispositivos.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="Angular" data-experience="1 año">
+                        <img src="img/14.png" alt="Angular">
+                        <div class="tech-info">
+                            <h3>Angular</h3>
+                            <p>Experiencia: 1 año</p>
+                            <p>Angular es un framework potente para la creación de aplicaciones web. Lo he utilizado para desarrollar aplicaciones dinámicas y de alto rendimiento, asegurando un flujo de datos eficiente y una excelente experiencia de usuario</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="Django" data-experience="1 año">
+                        <img src="img/15.png" alt="Django">
+                        <div class="tech-info">
+                            <h3>Django</h3>
+                            <p>Experiencia: 1 año</p>
+                            <p>Django es mi framework preferido para el desarrollo rápido de aplicaciones web seguras. He desarrollado paginas web con una gran capacidad para el uso de información presentada por usuarios.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="Flask" data-experience="1 año">
+                        <img src="img/16.png" alt="Flask">
+                        <div class="tech-info">
+                            <h3>Flask</h3>
+                            <p>Experiencia: 5 meses</p>
+                            <p>Flask es un microframework de Python que permite crear aplicaciones web rápidas y eficientes. He utilizado Flask para desarrollar aplicaciones web de pequeña y mediana escala, implementando soluciones personalizadas y escalables.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="HTML" data-experience="1 año">
+                        <img src="img/17.png" alt="HTML">
+                        <div class="tech-info">
+                            <h3>HTML</h3>
+                            <p>Experiencia: 4 año</p>
+                            <p>HTML es el lenguaje de marcado que utilizo para crear la estructura de páginas web. He trabajado en la creación de sitios web accesibles y optimizados para motores de búsqueda, siguiendo las mejores prácticas de desarrollo web.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="Node-js" data-experience="2 años">
+                        <img src="img/3.png" alt="Node-js">
+                        <div class="tech-info">
+                            <h3>Node js</h3>
+                            <p>Experiencia: 1 años</p>
+                            <p>Node.js es un entorno de ejecución de JavaScript que permite crear aplicaciones web escalables y de alto rendimiento. He utilizado Node.js para desarrollar servidores web y aplicaciones en tiempo real, implementando soluciones eficientes y seguras.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="JavaScript" data-experience="1 año">
+                        <img src="img/4.png" alt="JavaScript">
+                        <div class="tech-info">
+                            <h3>JavaScript</h3>
+                            <p>Experiencia: 1 año</p>
+                            <p>JavaScript es un lenguaje de programación que utilizo para crear interactividad y dinamismo en páginas web. He trabajado en la creación de aplicaciones web modernas y eficientes, implementando soluciones innovadoras y escalables.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="React" data-experience="1 año">
+                        <img src="img/5.png" alt="React">
+                        <div class="tech-info">
+                            <h3>React</h3>
+                            <p>Experiencia: 1 año</p>
+                            <p>React es una biblioteca de JavaScript que utilizo para crear interfaces de usuario interactivas y eficientes. He desarrollado aplicaciones web modernas y escalables, implementando soluciones innovadoras y eficientes.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="Python" data-experience="1 año">
+                        <img src="img/7.jpeg" alt="Python">
+                        <div class="tech-info">
+                            <h3>Python</h3>
+                            <p>Experiencia: 3 año</p>
+                            <p>Python es un lenguaje de programación versátil y fácil de aprender. He utilizado Python para desarrollar aplicaciones web, scripts y herramientas de automatización, implementando soluciones eficientes y escalables.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologia" id="seguridad" style="display: none;">
+                    <div class="tech-item" data-name="Metasploit" data-experience="1 año">
+                        <img src="img/6.png" alt="Metasploit">
+                        <div class="tech-info">
+                            <h3>Metasploit</h3>
+                            <p>Experiencia: 1 año</p>
+                            <p>Metasploit es una herramienta de código abierto para el desarrollo y ejecución de exploits. He utilizado Metasploit para realizar pruebas de penetración y evaluaciones de seguridad, identificando vulnerabilidades y fortaleciendo la seguridad de sistemas y aplicaciones.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="Nmap" data-experience="1 año">
+                        <img src="img/12.jpeg" alt="Nmap">
+                        <div class="tech-info">
+                            <h3>Nmap</h3>
+                            <p>Experiencia: 1 año</p>
+                            <p>Nmap es una herramienta de código abierto para la exploración de redes y auditorías de seguridad. He utilizado Nmap para identificar dispositivos y servicios en redes, detectar vulnerabilidades y evaluar la seguridad de sistemas y aplicaciones.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-name="Hydra" data-experience="1 año">
+                        <img src="img/11.png" alt="Hydra">
+                        <div class="tech-info">
+                            <h3>Hydra</h3>
+                            <p>Experiencia: 1 año</p>
+                            <p>Hydra es una herramienta de código abierto para realizar ataques de fuerza bruta y diccionario en servicios de autenticación. He utilizado Hydra para realizar pruebas de penetración y evaluaciones de seguridad, identificando vulnerabilidades y fortaleciendo la seguridad de sistemas y aplicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="logros">
+        <h1>Logros y Certificaciones</h1>
+        <div class="logros-contenedor">
+            <div class="logro" data-certificado="pdf/activate_certificate.pdf">
+                <h3>Certificación en Desarrollo Web</h3>
+                <p>Obtenida en Udemy (2023).</p>
+            </div>
+            <div class="logro" data-certificado="pdf/Coursera B3UN8ZPFBXLU.pdf">
+                <h3>Certificacion en Desarrollo con Kotlin</h3>
+                <p>Obtenida en Coursera (2024).</p>
+            </div>
+            <div class="logro" data-certificado="pdf/Edgar Leonardo Patiño Largo.pdf">
+                <h3>Semana de la investigacion</h3>
+                <p>Obtenida en Colombia (2024).</p>
+            </div>
+            <div class="logro" data-certificado="pdf/Coursera R2AVQJCW4AQ5.pdf">
+                <h3>Certificado en Python </h3>
+                <p>Obtenida en Google activate (2023).</p>
+            </div>
+        </div>
+    </section>
+    <div id="certificacion-modal" class="modal">
+        <span class="close">&times;</span>
+        <iframe id="certificacion-pdf" class="modal-content"></iframe>
+    </div>
+    <script src="js/animacion.js"></script>
+    <script src="js/menu.js"></script>
+    <footer>
+        <div class="redSocial">
+            <p>Follow us on social media</p>
+            <ul>
+                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://www.twitter.com">Twitter</a></li>
+                <li><a href="https://www.instagram.com">Instagram</a></li>
+            </ul>
+        </div>
+        <main>
+            <p>&copy; 2024</p>
+        </main>
+    </footer>
+</body>
+</html>

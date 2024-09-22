@@ -1,0 +1,344 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* --- Header y navegación --- */
+#main-nav {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nav-links li {
+    margin-left: 30px;
+}
+
+#nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    transition: color 0.3s ease;
+}
+
+#nav-links li a:hover {
+    color: #f39c12;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* --- Icono del menú hamburguesa para móviles --- */
+#menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    #nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+
+    #nav-links li {
+        margin: 20px 0;
+    }
+}
+
+/* Sección de inicio (Contacto) */
+.inicio {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.inicio img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.inicio img:hover {
+    transform: scale(1.1);
+}
+
+.texto_inicio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+}
+
+.texto_inicio h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.texto_inicio p {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: inline-block;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .texto_inicio h1 {
+        font-size: 2.5rem;
+    }
+    .texto_inicio p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos base para la sección de contacto */
+.contacto-seccion {
+    background: linear-gradient(135deg, #f39c12, #ff6b6b);
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor de la sección */
+.contenedor-contacto {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+}
+
+/* Título y descripción */
+.titulo-contacto {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    color: #fff;
+}
+
+.descripcion-contacto {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Formulario de contacto */
+.formulario-contacto {
+    display: grid;
+    gap: 20px;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo-formulario label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Botón de envío */
+.boton-enviar {
+    padding: 15px 30px;
+    border: none;
+    background-color: #ffffff;
+    color: #f39c12;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+}
+
+.boton-enviar:hover {
+    background-color: #ff6b6b;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.boton-enviar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.boton-enviar:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Estilos adicionales para el fondo */
+.contacto-seccion::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent 70%);
+    z-index: 0;
+    transform: rotate(45deg);
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedor-contacto {
+        padding: 30px;
+    }
+
+    .titulo-contacto {
+        font-size: 2rem;
+    }
+
+    .descripcion-contacto {
+        font-size: 1rem;
+    }
+
+    .boton-enviar {
+        font-size: 1rem;
+    }
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer .redSocial ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer .redSocial ul li {
+    margin: 0 15px;
+}
+
+footer .redSocial ul li a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .redSocial ul li a:hover {
+    color: #f39c12;
+}
+
+footer main p {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
