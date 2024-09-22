@@ -2,11 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     /* Animación de escritura (typewriter) */
     const texts = [
-        'Hello world', // Plain text
-        'print("Hello, World!")', // Python
-        'console.log("Hello, World!");', // JavaScript
-        'System.out.println("Hello, World!");', // Java
-        'printf("Hello, World!\\n");' // C
+        'Nombre Empresa', // Plain text
     ];
     const speed = 150;           // Velocidad de escritura
     const eraseSpeed = 50;       // Velocidad para borrar
@@ -65,35 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (firstMenuItem) {
         firstMenuItem.click();
     }
-
-    /* Modal para logros y certificados en PDF */
-    const logros = document.querySelectorAll('.logro');
-    const modal = document.getElementById('certificacion-modal');
-    const modalPdf = document.getElementById('certificacion-pdf');
-    const closeBtn = document.querySelector('.close');
-
-    // Muestra el PDF en el modal
-    logros.forEach(logro => {
-        logro.addEventListener('click', function() {
-            const pdfSrc = this.getAttribute('data-certificado');
-            modalPdf.src = pdfSrc;
-            modal.style.display = "block";
-        });
-    });
-
-    // Cierra el modal al hacer clic en el botón de cerrar
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = "none";
-        });
-    }
-
-    // Cierra el modal si el usuario hace clic fuera del iframe
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
 
     // Efecto de scroll en el texto (fade-in cuando el usuario se desplaza)
     window.addEventListener('scroll', function() {
