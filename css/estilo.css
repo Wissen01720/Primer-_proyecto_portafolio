@@ -13,8 +13,8 @@ h1, h2, h3 {
 
 /* --- Header y navegación --- */
 #main-nav {
-    background-color: #62a588;
-    color: white;
+    background-color: #2c3e50;
+    color: #ecf0f1;
     padding: 0.5rem 1rem;
     position: sticky;
     top: 0;
@@ -22,6 +22,17 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#nav-links li a, .contact-link a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+#nav-links li a:hover, .contact-link a:hover {
+    color: #3498db;
 }
 
 .logo .btn {
@@ -44,17 +55,6 @@ h1, h2, h3 {
     margin: 0 15px;
 }
 
-#nav-links li a, .contact-link a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem;
-    transition: color 0.3s ease;
-}
-
-#nav-links li a:hover, .contact-link a:hover {
-    color: #f39c12;
-}
-
 .menu-icon {
     display: none;
     font-size: 1.5rem;
@@ -63,11 +63,13 @@ h1, h2, h3 {
 
 @media (max-width: 768px) {
     #main-nav {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .menu-icon {
         display: block;
+        align-self: flex-end;
     }
 
     #nav-links {
@@ -91,7 +93,75 @@ h1, h2, h3 {
     }
 }
 
-.about_us {
+/* Sección de inicio imagen */
+.inicio {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.inicio img {
+    width: 100%;
+    height: auto;
+    opacity: 0.75;
+    filter: grayscale(20%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.inicio img:hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+.texto_inicio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    width: 90%;
+    max-width: 600px;
+}
+
+.texto_inicio h1 {
+    font-size: 4rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.texto_inicio p {
+    font-size: 1.5rem;
+    animation: fadeIn 2s ease-out;
+}
+
+@media (max-width: 768px) {
+    .texto_inicio h1 {
+        font-size: 2.5rem;
+    }
+
+    .texto_inicio p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección de los servicios */
+.about_us, .about_us_inverted {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,123 +171,100 @@ h1, h2, h3 {
 }
 
 .about_us_inverted {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 2rem;
-    background-color: #f9f9f9;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
     flex-direction: row-reverse;
 }
 
-.about_us img {
+.about_us img, .about_us_inverted img {
     width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 4rem;
+    margin: 0 2rem;
 }
 
-.about_us_inverted img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 1rem;
-    /* Reducir margen para pegar más la imagen a la derecha */
-}
-
-.about_us img:hover {
+.about_us img:hover, .about_us_inverted img:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.about_us_inverted img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.seccion-about {
+.seccion-about, .seccion-about_inverted {
     max-width: 600px;
 }
 
 .seccion-about_inverted {
-    direction: rtl;
-    max-width: 600px;
-    margin: 4rem;
-}
-
-.seccion-about h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    color: #333;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.seccion-about_inverted h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    color: #333;
-    position: relative;
-    padding-bottom: 0.5rem;
     text-align: right;
+}
+
+.seccion-about h1, .seccion-about_inverted h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.seccion-about h1::after, .seccion-about_inverted h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #f39c12;
 }
 
 .seccion-about h1::after {
-    content: '';
-    position: absolute;
     left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 3px;
-    background-color: #f39c12;
 }
 
 .seccion-about_inverted h1::after {
-    content: '';
-    position: absolute;
     right: 0;
-    bottom: 0;
-    width: 50px;
-    height: 3px;
-    background-color: #f39c12;
 }
 
-.seccion-about p {
+.seccion-about p, .seccion-about_inverted p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #555;
 }
 
-.seccion-about_inverted p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-    text-align: right;
-}
-
-/* Responsive design */
 @media (max-width: 968px) {
-    .about_us {
+    .about_us, .about_us_inverted {
         flex-direction: column;
         text-align: center;
     }
 
-    .about_us img {
-        margin-right: 0;
-        margin-bottom: 2rem;
+    .about_us img, .about_us_inverted img {
+        margin: 0 0 2rem 0;
     }
 
-    .seccion-about h1::after {
+    .seccion-about, .seccion-about_inverted {
+        max-width: 100%;
+    }
+
+    .seccion-about h1::after, .seccion-about_inverted h1::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .seccion-about_inverted {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about_us img, .about_us_inverted img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .seccion-about h1, .seccion-about_inverted h1 {
+        font-size: 2rem;
+    }
+
+    .seccion-about p, .seccion-about_inverted p {
+        font-size: 1rem;
     }
 }
 
@@ -234,6 +281,7 @@ footer .redSocial ul {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+    padding: 0;
 }
 
 footer .redSocial ul li {
@@ -253,4 +301,14 @@ footer .redSocial ul li a:hover {
 footer main p {
     margin-top: 1rem;
     font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    footer .redSocial ul {
+        flex-wrap: wrap;
+    }
+
+    footer .redSocial ul li {
+        margin: 10px;
+    }
 }
